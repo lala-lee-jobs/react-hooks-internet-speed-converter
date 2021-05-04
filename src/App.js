@@ -1,7 +1,8 @@
 import './App.css';
 
 import React, {useState} from 'react';
-import logo from './logo.svg';
+import CardFooter from './components/CardFooter';
+import UnitControl from './components/UnitControl';
 
 function App() {
   const [inputValue, setInputValue] = useState(0);
@@ -13,14 +14,7 @@ function App() {
     <div className="container">
       <div className="card-header">Network Speed Convertere</div>
       <div className="card-body">
-        <div className="unit-control">
-          <div className="unit">Mbps</div>
-          <span className="exchange-icon fa-fw fa-stack">
-            <i className="far fa-circle fa-stack-2x"></i>
-            <i className="fas fa-exchange-alt fa-stack-1x"></i>
-          </span>
-          <div className="unit">MB/s</div>
-        </div>
+        <UnitControl />
         <div className="converter">
           <div className="flex-1">
             <div className="converter-title">Set</div>
@@ -36,7 +30,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="card-footer">FAST</div>
+      <CardFooter />
     </div>
   );
 }
